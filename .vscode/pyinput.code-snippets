@@ -15,6 +15,14 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"enumerate":{
+		"scope": "python",
+		"prefix": "enumerate",
+		"body": [
+			"for $1,$2 in enumerate($3):",
+		],
+		"description": "enumerate"
+	},
 	"map(int,input())": {
 		"scope": "python",
 		"prefix": "miis",
