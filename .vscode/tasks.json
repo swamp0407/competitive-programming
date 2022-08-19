@@ -1,6 +1,4 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
@@ -9,23 +7,29 @@
             "command": "oj",
             "args": [
                 "t",
-                "-c", 
+                "-c",
                 "python3 ${file}",
                 "-d",
                 "${fileDirname}/tests/",
                 "&&",
-                "cd", "${fileDirname}",
+                "cd",
+                "${fileDirname}",
                 "&&",
-                "acc","s","--skip-filename", "--" ,"--guess-python-interpreter" ,"pypy", 
+                "acc",
+                "s",
+                "--skip-filename",
+                "--",
+                "--guess-python-interpreter",
+                "pypy"
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                // "isDefault": true
             },
             "problemMatcher": []
         },
         {
-            "label": "build c++ main.cpp",
+            "label": "build c++ {file}",
             "type": "shell",
             "command": "g++-11",
             "args": [
@@ -35,7 +39,7 @@
                 "-Wall",
                 "-Wextra",
                 "-Werror",
-                "${fileDirname}/main.cpp",
+                "${file}",
                 "-o",
                 "${fileDirname}/a.out"
             ],
@@ -50,44 +54,67 @@
             "command": "oj",
             "args": [
                 "t",
-                "-c", 
+                "-c",
                 "${fileDirname}/a.out",
                 "-d",
                 "${fileDirname}/tests/",
                 "&&",
-                "cd", "${fileDirname}",
+                "cd",
+                "${fileDirname}",
                 "&&",
-                "acc","s","${fileDirname}/main.cpp", "--", 
+                "acc",
+                "s",
+                "${fileDirname}/main.cpp",
+                "--"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": false
             },
             "dependsOn": [
-                "build c++ main.cpp"
-              ],
+                "build c++ {file}"
+            ],
             "problemMatcher": []
         },
-    ]
-}
-/*
-by https://qiita.com/chokoryu/items/4b31ffb89dbc8cb86971
-{
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
         {
-            "label": "test_atcoder_sample",
+            "type": "shell",
+            "label": "do test @c++ by using input.txt",
+            "command": "${fileDirname}/a.out",
+            "args": [
+                "<",
+                "${fileDirname}/input.txt"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "type": "shell",
-            "command": "${workspaceFolder}/cptest.sh",
+            "dependsOn": [
+                "build c++ {file}"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++-11 アクティブなファイルのビルド",
+            "command": "/usr/local/bin/g++-11",
             "args": [
-                "${fileBasenameNoExtension}"
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "デバッガーによって生成されたタスク。"
         }
     ]
 }
-*/

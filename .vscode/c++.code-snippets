@@ -1,5 +1,5 @@
 {
-    //参考　https://github.com/antyuntyuntyun/atcoder-cpp-template　2022-08-05 15:37:37
+    /*参考　https://github.com/antyuntyuntyun/atcoder-cpp-template */ //2022-08-05 15:37:37
     "c++template": {
         // "scope": "cc",
         "prefix": "c++template",
@@ -45,9 +45,10 @@
             "/* REP macro */",
             "#define reps(i, a, n) for (ll i = (a); i < (ll)(n); ++i)",
             "#define rep(i, n) reps(i, 0, n)",
-            "#define rrep(i, n) reps(i, 1, n + 1)",
-            "#define repd(i,n) for(ll i=n-1;i>=0;i--)",
-            "#define rrepd(i,n) for(ll i=n;i>=1;i--)",
+            "#define rep1(i, n) reps(i, 1, n + 1)",
+            "#define rreps(i, a, n) for (ll i = (n-1); i >= (ll)(a); i--)",
+            "#define rrep(i,n) rreps(i,0,n)",
+            "#define rrep1(i,n) rreps(i,1,n+1)",
             "",
             "/* debug */",
             "// 標準エラー出力を含む提出はrejectされる場合もあるので注意",
