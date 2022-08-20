@@ -1,7 +1,7 @@
 {
     "configurations": [
       {
-        "name": "cppdbg",
+        "name": "gcc-11-standard-c=c11-c++=c++17",
         "compilerPath": "/usr/local/bin/gcc-11",
         "includePath": ["${workspaceFolder}/**"],
         "defines": [],
