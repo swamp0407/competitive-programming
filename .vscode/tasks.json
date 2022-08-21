@@ -24,7 +24,7 @@
             ],
             "group": {
                 "kind": "build",
-                // "isDefault": true
+                "isDefault": true
             },
             "problemMatcher": []
         },
@@ -86,7 +86,7 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                // "isDefault": true
             },
             "dependsOn": [
                 "build c++ {file}"
