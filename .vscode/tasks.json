@@ -4,7 +4,7 @@
         {
             "type": "shell",
             "label": "do oj test @python",
-            "command": "oj",
+            "command": "/usr/local/bin/oj",
             "args": [
                 "t",
                 "-c",
