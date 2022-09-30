@@ -652,7 +652,7 @@
             "cmb = list(itertools.combinations(seq,3)) # 組み合わせ列挙 5C3",
         ],
         "description": "nCa (組み合わせ)"
-    },	
+    },
     "combinations_with_replacement": {
         "prefix": "combinations_with_replacement",
         "body": [
@@ -2206,7 +2206,7 @@
         "description": "しゃくとり法"
     },
     "syakutori_left": {
-        "prefix": "syakutori",
+        "prefix": "syakutori_left",
         "body": [
             "from collections import deque",
             "q=deque()",
@@ -2221,6 +2221,52 @@
             "    (何らかの処理を行う。whileがbreakしたので、dequeに入っている連続部分列は条件を満たしている。特に右端の要素から左に延ばせる最大の長さになっている。)",
         ],
         "description": "しゃくとり法"
+    },
+    "syakutori_max": {
+        "prefix": "syakutori_max",
+        "body": [
+            "d = {}",
+            "left = 0",
+            "right = 0",
+            "ans = -1",
+            "def check():",
+            "    return (True or Falseを返す)",
+            "while right < len(s):",
+            "    if rightの値に応じて条件を更新:",
+            "        d[s[right]] = d.get(s[right], 0) + 1",
+            "    while not check(): #条件を満たすまでlを増やす",
+            "        # 現在のleftの値を消す前に条件を更新:",
+            "        if s[left].islower():",
+            "            if d[s[left]] == 0:",
+            "                del d[s[left]]",
+            "        left += 1 #leftを増やす",
+            "    ans = max(ans, right - left + 1)",
+            "    right+=1　#rightを増やす",
+        ],
+        "description": "尺取り法で最大値を求めるやり方。left = 0, right = 0, ans = -1としておく。leftとrightはそれぞれ左端と右端のインデックスを表す。区間は[left, right]（rightを含む）であり空文字は無し。"
+    },
+    "syakutori_min": {
+        "prefix": "syakutori_min",
+        "body": [
+            "d = {}",
+            "left = 0",
+            "right = 0",
+            "ans = 10**9+10",
+            "def check():",
+            "    return (True or Falseを返す)",
+            "while right < len(s):",
+            "    if rightの値に応じて条件を更新:",
+            "        d[s[right]] = d.get(s[right], 0) + 1",
+            "    while check(): #条件を満たさなくなるまでlを増やす",
+            "        ans = min(ans, right - left + 1)",
+            "        # 現在のleftの値を消す前に条件を更新:",
+            "        if s[left].islower():",
+            "            if d[s[left]] == 0:",
+            "                del d[s[left]]",
+            "        left += 1 #leftを増やす",
+            "    right+=1　#rightを増やす",
+        ],
+        "description": "尺取り法で最小値を求めるやり方。left = 0, right = 0, ans = 10**9+10としておく。leftとrightはそれぞれ左端と右端のインデックスを表す。区間は[left, right]（rightを含む）であり空文字は無し。"
     },
     "BIT": {
         "prefix": "BIT",
@@ -2483,6 +2529,4 @@
         ],
         "description": ""
     },
-
-
 }
