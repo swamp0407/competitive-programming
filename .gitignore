@@ -8,3 +8,4 @@ a.out.dSYM
 peda-session*
 
 private
+.mypy_cache
