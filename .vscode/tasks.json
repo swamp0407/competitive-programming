@@ -31,7 +31,7 @@
         {
             "label": "build c++ {file}",
             "type": "shell",
-            "command": "g++-11",
+            "command": "g++-12",
             "args": [
                 "-g",
                 "-O0",
@@ -95,8 +95,8 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: g++-11 アクティブなファイルのビルド",
-            "command": "/usr/local/bin/g++-11",
+            "label": "C/C++: g++-12 アクティブなファイルのビルド",
+            "command": "/usr/local/bin/g++-12",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",

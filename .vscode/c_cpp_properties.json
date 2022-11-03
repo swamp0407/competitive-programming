@@ -1,13 +1,16 @@
 {
     "configurations": [
-      {
-        "name": "gcc-11-standard-c=c11-c++=c++17",
-        "compilerPath": "/usr/local/bin/gcc-11",
-        "includePath": ["${workspaceFolder}/**"],
-        "defines": [],
-        "cStandard": "c11",
-        "cppStandard": "c++17"
-      }
+        {
+            "name": "gcc-12-standard-c=c11-c++=c++17",
+            "compilerPath": "/usr/local/bin/gcc-12",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
     ],
     "version": 4
 }
