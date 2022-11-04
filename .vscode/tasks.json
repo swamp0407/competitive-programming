@@ -40,6 +40,7 @@
                 "-Wextra",
                 "-Werror",
                 "${file}",
+                "-I/usr/local/include",
                 "-o",
                 "${fileDirname}/a.out"
             ],
@@ -101,6 +102,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
+                "-lboost_iostreams-mt"
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

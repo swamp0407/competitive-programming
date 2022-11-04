@@ -1,6 +1,7 @@
 __pycache__
 node_modules
 test
+temp
 
 a.out
 a.out.dSYM
