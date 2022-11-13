@@ -44,7 +44,7 @@
             // "args": ["<${fileDirname}/input.txt"],
             "stopAtEntry": true,
             "cwd": "${fileDirname}",
-            "externalConsole": true,
+            // "externalConsole": true,
             "MIMode": "lldb",
         }
     ]
