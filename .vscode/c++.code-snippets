@@ -86,7 +86,23 @@
             "}",
         ],
         "description": ""
+    },    "change_cin": {
+        "prefix": "change_cin",
+        "body": [
+            "#include <fstream>",
+            "",
+            "void change_cin()",
+            "{",
+            "  // 追加２, 以降 cin の入力元が 'input.txt' になる",
+            "  std::ifstream in(\"input.txt\");",
+            "  std::cin.rdbuf(in.rdbuf());",
+            "",
+            "  // ...",
+            "}",
+        ],
+        "description": ""
     },
 
-    
+
+
 }
