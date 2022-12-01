@@ -15,9 +15,9 @@ d1 = [float("inf")]*(3010)
 
 # for i in range(n+1):
 # dp[0][0][1] = 0
-d1[0] = 0
-
-for i in range(n):
+d0[0] = 1
+d1[A[0]] = 0
+for i in range(1, n):
     for j in range(3009, -1, -1):
         for k in range(2):
             if k == 0:
