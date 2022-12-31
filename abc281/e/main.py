@@ -3,29 +3,14 @@
 import math
 from bisect import (bisect, bisect_left, bisect_right, insort, insort_left,
                     insort_right)
+from typing import Generic, Iterable, Iterator, List, TypeVar, Union
 
 n, m, k = map(int, input().split())
 
 A = list(map(int, input().split()))
 
-over_k_sum = sum(A[:k])
 
-tmp_sum = 0
-cur_k = k
-
-
-# 尺取り法で最大値を求めるやり方。left = 0, right = 0, ans = -1としておく。leftとrightはそれぞれ左端と右端のインデックスを表す。区間は[left, right]（rightを含む）であり空文字は無し。
-d = {}
-left = 0
-right = 0
-ans = -1
-
-'''
-bisect(A,x) #ソートされたリストAにソートを崩さずに値xを挿入するとき、xの入るべきインデックスを返す。
-bisect_left(A,x) #リストAに値xを入れ、xが複数になるとき、一番左の値xのインデックスを返す。
-bisect_right(A,x) #リストAに値xを入れ、xが複数になるとき、一番右の値xのインデックスを返す(bisect.bisectと同じ)。
-insort(A,x) #リストAに含まれるxのうち、どのエントリーよりも後ろにxをO(N)で挿入する。
-'''
+T = TypeVar('T')
 
 
 class SortedMultiset(Generic[T]):
@@ -167,13 +152,51 @@ class SortedMultiset(Generic[T]):
         return ans
 
 
-st = SortedMultiset()
+class DS:
+    def __init__(self, k) -> None:
+        self.k = k
+        self.sum = 0
+        self.l = SortedMultiset()
+        self.r = SortedMultiset()
+
+    def ladd(self, x):
+        self.sum += x
+        self.l.add(x)
+
+    def lerase(self, x):
+        self.sum -= x
+        self.l.discard(x)
+
+    def add(self, x):
+        self.ladd(x)
+        if len(self.l) <= self.k:
+            return
+        self.r.add(self.l[-1])
+        self.lerase(self.l[-1])
+
+    def erase(self, x):
+        if x in self.l:
+            self.lerase(x)
+        else:
+            self.r.discard(x)
+        if len(self.l) < self.k:
+            self.ladd(self.r[0])
+            self.r.discard(self.r[0])
+
+
+ans = 0
+ds = DS(k)
 
 for i in range(m):
-    st.add(A[i])
+    ds.add(A[i])
 
+ans = [ds.sum]
 
-for i in range(n-m+1):
-    if i > k:
-        print(over_k_sum)
-        exit()
+for i in range(n-m):
+    ar = A[i]
+    an = A[i+m]
+    ds.add(an)
+    ds.erase(ar)
+    ans.append(ds.sum)
+
+print(*ans)
