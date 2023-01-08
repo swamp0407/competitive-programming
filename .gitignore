@@ -13,3 +13,4 @@ private
 
 # for scala
 .scalafmt.conf
+.metals
