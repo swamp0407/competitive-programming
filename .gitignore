@@ -10,3 +10,6 @@ peda-session*
 
 private
 .mypy_cache
+
+# for scala
+.scalafmt.conf
