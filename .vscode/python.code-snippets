@@ -2,6 +2,7 @@
     // 参考　https://github.com/otsuneko/competitive-programming/blob/master/.vscode/py_atcoder_snippet.code-snippets　2022-08-05 15:39:45
     "Template_AtCoder": {
         "prefix": "Template_AtCoder",
+        "scope": "python",
         "body": [
             "import sys",
             "input = lambda: sys.stdin.readline().rstrip()",
@@ -13,6 +14,7 @@
     },
     "Template_Codeforces": {
         "prefix": "Template_Codeforces",
+        "scope": "python",
         "body": [
             "import sys",
             "input = lambda: sys.stdin.readline().rstrip()",
@@ -31,6 +33,7 @@
     },
     "FileInput": {
         "prefix": "FileInput",
+        "scope": "python",
         "body": [
             "import sys",
             "stdin = open('tmp\\abcxxx_a\\sample-1.in')",
@@ -39,41 +42,49 @@
     },
 	"input_line int(single)":{
 		"prefix":"input_line int(single)",
+        "scope": "python",
 		"body":["int(input())"],
 		"description":"input int(single)",
 	},
 	"input_line int(multiple)":{
 		"prefix":"input_line int(multiple)",
+        "scope": "python",
 		"body":["map(int,input().split())"],
 		"description":"input int(multiple)",
 	},
 	"input_line list(int)":{
 		"prefix":"input_line list(int)",
+        "scope": "python",
 		"body":["list(map(int,input().split()))"],
 		"description":"input list(int)",
 	},
     "input_lines list(int)":{
 		"prefix":"input_lines list(int)",
+        "scope": "python",
 		"body":["[int(input()) for _ in range($1)]"],
 		"description":"input_lines list(int)",
 	},
 	"input_lines list(multiple_int)":{
 		"prefix":"input_lines list(multiple_int)",
+        "scope": "python",
 		"body":["[list(map(int,input().split())) for _ in range($1)]"],
 		"description":"input_lines list(multiple_int)",
 	},
 	"input_line list(string)":{
 		"prefix":"input_line list(string)",
+        "scope": "python",
 		"body":["list(input())"],
 		"description":"input line list(string)",
 	},
     "input_lines list(string)":{
 		"prefix":"input_lines list(string)",
+        "scope": "python",
 		"body":["[list(input()) for _ in range($1)]"],
 		"description":"input_lines list(string)",
 	},
     "input_tree": {
         "prefix": "input_tree",
+        "scope": "python",
         "body": [
             "N = int(input())",
             "graph = [[] for _ in range(N)]",
@@ -87,16 +98,19 @@
     },
     "print":{
 		"prefix":"print",
+        "scope": "python",
 		"body":["print($1)"],
 		"description":"print",
 	},
     "print_sep":{
 		"prefix":"print_sep",
+        "scope": "python",
 		"body":["print(*$1, sep=\"\\n\")"],
 		"description":"print_sep",
 	},
     "print_YesNo": {
         "prefix": "print_YesNo",
+        "scope": "python",
         "body": [
             "print([\"No\",\"Yes\"][$1])",
         ],
@@ -104,6 +118,7 @@
     },
     "print_YESNO": {
         "prefix": "print_YESNO",
+        "scope": "python",
         "body": [
             "print([\"NO\",\"YES\"][$1])",
         ],
@@ -111,6 +126,7 @@
     },
     "deque": {
         "prefix": "deque",
+        "scope": "python",
         "body": [
             "from collections import deque",
             "d = deque($1)",
@@ -119,6 +135,7 @@
     },
     "heapq": {
         "prefix": "heapq",
+        "scope": "python",
         "body": [
             "from heapq import heapify, heappush, heappop, heappushpop, heapreplace, nlargest, nsmallest  # heapqライブラリのimport",
             "",
@@ -134,6 +151,7 @@
     },
     "MultiSet": {
         "prefix": "MultiSet(OrderedSet)",
+        "scope": "python",
         "body": [
             "import bisect",
             "",
@@ -199,6 +217,7 @@
     },
     "SortedMultiset": {
         "prefix": "SortedMultiset",
+        "scope": "python",
         "body": [
             "",
             "import math",
@@ -339,6 +358,7 @@
 
     "sort_with_index": {
         "prefix": "sort_with_index",
+        "scope": "python",
         "body": [
             "def sort_with_index(arr, reverse=False):",
             "    if reverse:",
@@ -350,6 +370,7 @@
     },
     "sort_multiple": {
         "prefix": "sort_multiple",
+        "scope": "python",
         "body": [
             "# 昇順降順を入れ替える場合はlambda式の正負を反転",
             "$1.sort(key=lambda x:(-x[1],x[0]))",
@@ -358,6 +379,7 @@
     },
     "rotate_2d": {
         "prefix": "rotate_2d",
+        "scope": "python",
         "body": [
             "# 二次元配列の90度右回転",
             "def rotate_2d(arr):",
@@ -368,6 +390,7 @@
     },
     "inverse_2d": {
         "prefix": "inverse_2d",
+        "scope": "python",
         "body": [
             "inv = list(zip(*$1))",
         ],
@@ -375,6 +398,7 @@
     },
     "baisuu": {
         "prefix": "baisuu",
+        "scope": "python",
         "body": [
             "2の倍数：1の位が2,4,6,8,0",
             "3の倍数：各桁の数字の和が3の倍数",
@@ -391,6 +415,7 @@
     },
     "ceil": {
         "prefix": "ceil",
+        "scope": "python",
         "body": [
             "-(-($1)//)",
         ],
@@ -398,6 +423,7 @@
     },
     "mod_1000000007": {
         "prefix": "mod_1000000007",
+        "scope": "python",
         "body": [
             "mod = 10**9+7",
         ],
@@ -405,6 +431,7 @@
     },
     "mod_998244353": {
         "prefix": "mod_998244353",
+        "scope": "python",
         "body": [
             "mod = 998244353",
         ],
@@ -412,6 +439,7 @@
     },
     "round_half_up": {
         "prefix": "round_half_up",
+        "scope": "python",
         "body": [
             "from decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN",
             "f = 123.456",
@@ -426,6 +454,7 @@
     },
     "gcd": {
         "prefix": "gcd",
+        "scope": "python",
         "body": [
             "def gcd(a,b):",
             "    if b == 0:",
@@ -437,6 +466,7 @@
     },
     "gcdlist": {
         "prefix": "gcdlist",
+        "scope": "python",
         "body": [
             "def gcd(a,b):",
             "    if b == 0:",
@@ -454,6 +484,7 @@
     },
     "lcm": {
         "prefix": "lcm",
+        "scope": "python",
         "body": [
             "def gcd(a,b):",
             "    if b == 0:",
@@ -468,6 +499,7 @@
     },
     "lcmlist": {
         "prefix": "lcmlist",
+        "scope": "python",
         "body": [
             "def gcd(a,b):",
             "    if b == 0:",
@@ -485,6 +517,7 @@
     },
     "digsum": {
         "prefix": "digsum",
+        "scope": "python",
         "body": [
             "def digsum(n):",
             "    res = 0",
@@ -498,6 +531,7 @@
     },
     "base_n": {
         "prefix": "base_n",
+        "scope": "python",
         "body": [
             "# 10進数⇒2,8,16進数",
             "x = 10",
@@ -533,6 +567,7 @@
     },
     "divisor": {
         "prefix": "divisor",
+        "scope": "python",
         "body": [
             "def divisor(n):",
             "    lower_divisors , upper_divisors = [], []",
@@ -549,6 +584,7 @@
     },
     "mcb": {
         "prefix": "mcb",
+        "scope": "python",
         "body": [
             "def mcb(N):",
             "    L,R = 1, 10**5+1 # Nの桁数によってRの桁数も変化(例：N=10^15　⇒　R=10^5+1)",
@@ -564,6 +600,7 @@
     },
     "prime_decomposition": {
         "prefix": "prime_decomposition",
+        "scope": "python",
         "body": [
             "def prime_decomposition(n):",
             "  i = 2",
@@ -581,6 +618,7 @@
     },
     "is_prime": {
         "prefix": "is_prime",
+        "scope": "python",
         "body": [
             "def is_prime(n):",
             "    for i in range(2, n + 1):",
@@ -594,6 +632,7 @@
     },
     "sieve": {
         "prefix": "sieve",
+        "scope": "python",
         "body": [
             "def sieve(n):",
             "    is_prime = [True for _ in range(n+1)]",
@@ -612,6 +651,7 @@
     },
     "pow_doubling": {
         "prefix": "pow_doubling",
+        "scope": "python",
         "body": [
             "def pos(x, n, m):",
             "    if n == 0:",
@@ -625,6 +665,7 @@
     },
     "euler_phi": {
         "prefix": "euler_phi",
+        "scope": "python",
         "body": [
             "def euler_phi(n):",
             "    res = n",
@@ -651,6 +692,7 @@
     },
     "Modint": {
         "prefix": "Modint",
+        "scope": "python",
         "body": [
             "class ModInt:",
             "    def __init__(self, x):",
@@ -733,6 +775,7 @@
     },
     "bitlist": {
         "prefix": "bitlist",
+        "scope": "python",
         "body": [
             "import itertools",
             "",
@@ -746,6 +789,7 @@
     },
     "permutationCoeff(nPr)": {
         "prefix": "permutationCoeff(nPr)",
+        "scope": "python",
         "body": [
             "def permutationCoeff(n, k):",
             "    fact = [0 for _ in range(n + 1)]",
@@ -766,6 +810,7 @@
     },
     "permutation": {
         "prefix": "permutation",
+        "scope": "python",
         "body": [
             "import itertools",
             "",
@@ -776,6 +821,7 @@
     },
     "permutation_product": {
         "prefix": "permutation_product",
+        "scope": "python",
         "body": [
             "import itertools",
             "seq = ('a', 'b', 'c')",
@@ -785,6 +831,7 @@
     },
     "combination": {
         "prefix": "combination",
+        "scope": "python",
         "body": [
             "import itertools",
             "",
@@ -795,6 +842,7 @@
     },
     "combinations_with_replacement": {
         "prefix": "combinations_with_replacement",
+        "scope": "python",
         "body": [
             "import itertools",
             "seq = ('a', 'b', 'c')",
@@ -806,6 +854,7 @@
     },
     "binomialCoeff(nCr)": {
         "prefix": "binomialCoeff(nCr)",
+        "scope": "python",
         "body": [
             "def nCr(n, r):",
             "",
@@ -820,6 +869,7 @@
     },
     "combination_with_repetition(nHr)": {
         "prefix": "combination_with_repetition(nHr)",
+        "scope": "python",
         "body": [
             "def nHr(n, r):",
             "",
@@ -835,6 +885,7 @@
     },
     "binomialCoeff(nCr_mod)": {
         "prefix": "binomialCoeff(nCr_mod)",
+        "scope": "python",
         "body": [
             "mod = 10**9 + 7",
             "# xの逆元を求める。フェルマーの小定理より、 x の逆元は x ^ (mod - 2) に等しい。計算時間はO(log(mod))程度。",
@@ -857,6 +908,7 @@
     },
     "crt": {
         "prefix": "crt",
+        "scope": "python",
         "body": [
             "def inv_gcd(a,b):",
             "    a=a%b",
@@ -926,6 +978,7 @@
     },
     "floor_sum": {
         "prefix": "floor_sum",
+        "scope": "python",
         "body": [
             "# [0,n)の範囲で、y=a/m*x+b/mの下側(直線上含む)にある格子点の数を求める",
             "def floor_sum(n,m,a,b):",
@@ -948,6 +1001,7 @@
     },
     "LIS": {
         "prefix": "LIS",
+        "scope": "python",
         "body": [
             "from bisect import bisect",
             "",
@@ -968,6 +1022,7 @@
     },
     "rotation_matrix": {
         "prefix": "rotation_matrix",
+        "scope": "python",
         "body": [
             "import math",
             "#回転前の座標",
@@ -986,6 +1041,7 @@
     },
     "compress_position": {
         "prefix": "compress_position",
+        "scope": "python",
         "body": [
             "def compress(arr):",
             "    *XS, = set(arr)",
@@ -997,6 +1053,7 @@
     },
     "counter": {
         "prefix": "counter",
+        "scope": "python",
         "body": [
             "from collections import Counter",
             "count = Counter($1)",
@@ -1005,6 +1062,7 @@
     },
     "defaultdict": {
         "prefix": "defaultdict",
+        "scope": "python",
         "body": [
             "from collections import defaultdict",
             "dict = defaultdict(int)",
@@ -1013,6 +1071,7 @@
     },
     "alphabet": {
         "prefix": "alphabet",
+        "scope": "python",
         "body": [
             "alphabet = dict.fromkeys(\"abcdefghijklmnopqrstuvwxyz\",0)",
         ],
@@ -1020,6 +1079,7 @@
     },
     "chr_and_ord": {
         "prefix": "chr_and_ord",
+        "scope": "python",
         "body": [
             "# 0-indexed",
             "def int_to_lower(k):",
@@ -1038,6 +1098,7 @@
     },
     "rolling": {
         "prefix": "rolling",
+        "scope": "python",
         "body": [
             "def rolling(s, n):",
             "    l = len(s)",
@@ -1048,6 +1109,7 @@
     },
     "regular_expression": {
         "prefix": "regular_expression",
+        "scope": "python",
         "body": [
             "import re",
             "s = \"testtestest\"",
@@ -1059,6 +1121,7 @@
     },
     "LCS": {
         "prefix": "LCS",
+        "scope": "python",
         "body": [
             "def lcs(S, T):",
             "    L1 = len(S)",
@@ -1092,6 +1155,7 @@
 
     "LCS_COUNT": {
         "prefix": "LCS_COUNT",
+        "scope": "python",
         "body": [
             "def lcs_count(S, T):",
             "    L1 = len(S)",
@@ -1116,6 +1180,7 @@
     },
     "bisect": {
         "prefix": "bisect",
+        "scope": "python",
         "body": [
             "from bisect import bisect, bisect_left, bisect_right, insort, insort_left, insort_right",
             "'''",
@@ -1129,6 +1194,7 @@
     },
     "meguru_bisect": {
         "prefix": "meguru_bisect",
+        "scope": "python",
         "body": [
             "def is_ok(arg):",
             "    # 条件を満たすかどうか？問題ごとに定義",
@@ -1153,6 +1219,7 @@
     },
     "Dijkstra": {
         "prefix": "Dijkstra",
+        "scope": "python",
         "body": [
             "from heapq import heappush, heappop",
             "inf=10**18",
@@ -1199,6 +1266,7 @@
     },
     "Bellman_Ford": {
         "prefix": "Bellman_Ford",
+        "scope": "python",
         "body": [
             "inf=float(\"inf\")",
             "def bellman_ford(s,n):",
@@ -1223,6 +1291,7 @@
     },
     "Warshall–Floyd": {
         "prefix": "Warshall–Floyd",
+        "scope": "python",
         "body": [
             "#d[i][j]は2頂点間i, j間の移動コストを格納, Vは頂点数",
             "inf = float(\"INF\")",
@@ -1283,6 +1352,7 @@
     },
     "Union-Find": {
         "prefix": "Union-Find",
+        "scope": "python",
         "body": [
             "from collections import defaultdict",
             "",
@@ -1359,6 +1429,7 @@
     },
     "WeightedUnion-Find": {
         "prefix": "WeightedUnion-Find",
+        "scope": "python",
         "body": [
             "# 重み付きUnionFind",
             "class WeightedUnionFind:",
@@ -1422,6 +1493,7 @@
     },
     "Kruskal": {
         "prefix": "Kruskal",
+        "scope": "python",
         "body": [
             "#union-find木",
             "class UnionFind:",
@@ -1515,6 +1587,7 @@
     },
     "BalancingTree": {
         "prefix": "BalancingTree(AVLTree, OrderedSet)",
+        "scope": "python",
         "body": [
             "# 平衡二分木(AVL木)",
             "class BalancingTree:",
@@ -1691,6 +1764,7 @@
     },
     "Chu_Liu_Edmonds": {
         "prefix": "Chu_Liu_Edmonds",
+        "scope": "python",
         "body": [
             "from heapq import heappush, heappop",
             "def chu_liu_edmonds(v,edges,r):",
@@ -1777,6 +1851,7 @@
     },
     "tree_diameter": {
         "prefix": "tree_diameter",
+        "scope": "python",
         "body": [
             "# N: 木Tの頂点数",
             "# G[u] = [(w, c), ...]:",
@@ -1805,6 +1880,7 @@
     },
     "LCA": {
         "prefix": "LCA",
+        "scope": "python",
         "body": [
             "import sys",
             "sys.setrecursionlimit(10**7)",
@@ -1886,6 +1962,7 @@
     },
     "LowLink": {
         "prefix": "LowLink",
+        "scope": "python",
         "body": [
             "import sys",
             "sys.setrecursionlimit(10**7)",
@@ -1930,6 +2007,7 @@
     },
     "Bridge": {
         "prefix": "Bridge",
+        "scope": "python",
         "body": [
             "import sys",
             "sys.setrecursionlimit(10**6)",
@@ -1976,6 +2054,7 @@
     },
     "SCC": {
         "prefix": "SCC",
+        "scope": "python",
         "body": [
             "import sys",
             "sys.setrecursionlimit(10**7)",
@@ -2028,6 +2107,7 @@
     },
     "dfs_islands": {
         "prefix": "dfs_islands",
+        "scope": "python",
         "body": [
             "# Pythonで提出！！",
             "import sys",
@@ -2059,6 +2139,7 @@
     },
     "dfs_timestamp": {
         "prefix": "dfs_timestamp",
+        "scope": "python",
         "body": [
             "# Pythonで提出！！",
             "import sys",
@@ -2107,6 +2188,7 @@
     },
     "dfs_stairs": {
         "prefix": "dfs_stairs",
+        "scope": "python",
         "body": [
             "# Pythonで提出！！",
             "import sys",
@@ -2132,6 +2214,7 @@
     },
     "bfs_maze": {
         "prefix": "bfs_maze",
+        "scope": "python",
         "body": [
             "from collections import deque",
             "",
@@ -2164,6 +2247,7 @@
     },
     "bfs_graph": {
         "prefix": "bfs_graph",
+        "scope": "python",
         "body": [
             "from collections import deque",
             "",
@@ -2196,6 +2280,7 @@
     },
     "bfs_01": {
         "prefix": "bfs_01",
+        "scope": "python",
         "body": [
             "from collections import deque",
             "",
@@ -2226,6 +2311,7 @@
     },
     "topological_sort": {
         "prefix": "topological_sort",
+        "scope": "python",
         "body": [
             "# V: 頂点数",
             "# G[v] = [w, ...]:",
@@ -2252,6 +2338,7 @@
     },
     "cumsum": {
         "prefix": "cumsum",
+        "scope": "python",
         "body": [
             "import itertools",
             "import operator",
@@ -2261,6 +2348,7 @@
     },
     "cumsum_2d": {
         "prefix": "cumsum_2d",
+        "scope": "python",
         "body": [
             "H,W = map(int,input().split())",
             "A = [list(map(int,input().split())) for _ in range(H)]",
@@ -2277,6 +2365,7 @@
     },
     "imos": {
         "prefix": "imos",
+        "scope": "python",
         "body": [
             "enter = [3, 4, 5]",
             "exit = [7, 6, 8]",
@@ -2299,6 +2388,7 @@
     },
     "imos_2d": {
         "prefix": "imos_2d",
+        "scope": "python",
         "body": [
             "N = int(input())",
             "H=W=1001",
@@ -2330,6 +2420,7 @@
     },
     "syakutori": {
         "prefix": "syakutori",
+        "scope": "python",
         "body": [
             "from collections import deque",
             "q=deque()",
@@ -2347,6 +2438,7 @@
     },
     "syakutori_total": {
         "prefix": "syakutori_total",
+        "scope": "python",
         "body": [
             "# 尺取り法で満たす区間数を求めるやり方。left = 0, right = 0, ans = -1としておく。leftとrightはそれぞれ左端と右端のインデックスを表す。区間は[left, right]（rightを含む）であり空文字は無し。",
             "C = {}",
@@ -2373,6 +2465,7 @@
 
     "syakutori_max": {
         "prefix": "syakutori_max",
+        "scope": "python",
         "body": [
             "# 尺取り法で最大値を求めるやり方。left = 0, right = 0, ans = -1としておく。leftとrightはそれぞれ左端と右端のインデックスを表す。区間は[left, right]（rightを含む）であり空文字は無し。",
             "d = {}",
@@ -2400,6 +2493,7 @@
     },
     "syakutori_min": {
         "prefix": "syakutori_min",
+        "scope": "python",
         "body": [
             "# 尺取り法で最小値を求めるやり方。left = 0, right = 0, ans = 10**9+10としておく。leftとrightはそれぞれ左端と右端のインデックスを表す。区間は[left, right]（rightを含む）であり空文字は無し。",
             "d = {}",
@@ -2427,6 +2521,7 @@
     },
     "BIT": {
         "prefix": "BIT",
+        "scope": "python",
         "body": [
             "# BIT(Fenwick Tree) ※一点加算、区間和のRSQ相当",
             "class BIT:",
@@ -2464,6 +2559,7 @@
     },
     "SegTree_Abstract": {
         "prefix": "SegTree_Abstract",
+        "scope": "python",
         "body": [
             "# 区間に行う操作(最小値:min、最大値:max、区間和:x+y、区間積:x*y、最大公約数:gcd)",
             "def segfunc(x, y):",
@@ -2540,6 +2636,7 @@
     },
     "RMQ_RUQ": {
         "prefix": "RMQ_RUQ",
+        "scope": "python",
         "body": [
             "# N: 処理する区間の長さ",
             "",
@@ -2608,6 +2705,7 @@
     },
     "knapsack": {
         "prefix": "knapsack",
+        "scope": "python",
         "body": [
             "N,W = map(int,input().split())",
             "goods = [list(map(int,input().split())) for _ in range(N)]",
@@ -2627,6 +2725,7 @@
     },
     "bitdp": {
         "prefix": "bitdp",
+        "scope": "python",
         "body": [
             "for i in range(n):",
             "    for j in range(n):",
@@ -2657,6 +2756,7 @@
     },
     "bitdp_rec": {
         "prefix": "bitdp_rec",
+        "scope": "python",
         "body": [
             "def rec(S,v):",
             "   if S == 0:",
@@ -2690,6 +2790,7 @@
 
     "bitdp_life": {
         "prefix": "bitdp_life",
+        "scope": "python",
         "body": [
             "N = int(input())",
             "S = [input() for _ in range(N)]",
@@ -2715,6 +2816,7 @@
     },
     "bitdp_life_rec": {
         "prefix": "bitdp_life_rec",
+        "scope": "python",
         "body": [
             "N = int(input())",
             "S = [input() for _ in range(N)]",
@@ -2744,6 +2846,7 @@
 
     "treeDP": {
         "prefix": "treeDP",
+        "scope": "python",
         "body": [
             "# Pythonで提出！！",
             "import sys",
@@ -2776,6 +2879,7 @@
     },
     "閉路構成": {
         "prefix": "bfs_閉路",
+        "scope": "python",
         "body": [
             "def bfs(dist):",
             "    detect = 0",
